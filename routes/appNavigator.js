@@ -8,10 +8,11 @@ import { ReviewDetails } from "../screens/reviewDetails";
 const { Navigator, Screen } = createStackNavigator();
 
 const HomeNavigator = () => (
-  <Navigator headerMode="none">
+  <Navigator>
+    {/* headerMode="none" in navigation*/}
     {/* other options: "float", "screen" */}
     <Screen name="Home" component={Home} />
-    <Screen name="Details" component={ReviewDetails} />
+    <Screen name="ReviewDetails" component={ReviewDetails} />
   </Navigator>
 );
 
