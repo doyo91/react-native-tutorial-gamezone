@@ -1,5 +1,4 @@
 import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import { Home } from "../screens/home";
@@ -7,7 +6,7 @@ import { ReviewDetails } from "../screens/reviewDetails";
 
 const { Navigator, Screen } = createStackNavigator();
 
-const HomeNavigator = () => (
+export const HomeStack = () => (
   <Navigator
     screenOptions={{
       headerStyle: {
@@ -17,8 +16,6 @@ const HomeNavigator = () => (
       headerTintColor: "#444",
     }}
   >
-    {/* headerMode="none" in navigation*/}
-    {/* other options: "float", "screen" */}
     <Screen
       name="Home"
       component={Home}
@@ -34,10 +31,4 @@ const HomeNavigator = () => (
       }}
     />
   </Navigator>
-);
-
-export const AppNavigator = () => (
-  <NavigationContainer>
-    <HomeNavigator />
-  </NavigationContainer>
 );
