@@ -12,7 +12,6 @@ export const HomeStack = ({ navigation }) => (
     screenOptions={{
       headerStyle: {
         backgroundColor: "#eee",
-        height: 80,
       },
       headerTintColor: "#444",
     }}
@@ -21,7 +20,7 @@ export const HomeStack = ({ navigation }) => (
       name="Home"
       component={Home}
       options={{
-        headerTitle: () => <Header navigation={navigation} title="GameZone" />,
+        header: () => <Header navigation={navigation} title="GameZone" />,
       }}
     />
     <Screen
