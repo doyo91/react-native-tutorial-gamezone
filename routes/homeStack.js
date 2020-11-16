@@ -3,10 +3,11 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import { Home } from "../screens/home";
 import { ReviewDetails } from "../screens/reviewDetails";
+import { Header } from "../shared/header";
 
 const { Navigator, Screen } = createStackNavigator();
 
-export const HomeStack = () => (
+export const HomeStack = ({ navigation }) => (
   <Navigator
     screenOptions={{
       headerStyle: {
@@ -20,7 +21,7 @@ export const HomeStack = () => (
       name="Home"
       component={Home}
       options={{
-        title: "GameZone",
+        headerTitle: () => <Header navigation={navigation} title="GameZone" />,
       }}
     />
     <Screen
