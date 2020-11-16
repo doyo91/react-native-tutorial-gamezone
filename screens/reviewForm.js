@@ -33,21 +33,33 @@ export const ReviewForm = ({ addReview }) => {
               placeholder="Review title"
               onChangeText={formikprops.handleChange("title")}
               value={formikprops.values.title}
+              onBlur={formikprops.handleBlur("title")}
             />
+            <Text style={globalStyles.errorText}>
+              {formikprops.touched.title && formikprops.errors.title}
+            </Text>
             <TextInput
               style={globalStyles.input}
               multiline
               placeholder="Review body"
               onChangeText={formikprops.handleChange("body")}
               value={formikprops.values.body}
+              onBlur={formikprops.handleBlur("body")}
             />
+            <Text style={globalStyles.errorText}>
+              {formikprops.touched.body && formikprops.errors.body}
+            </Text>
             <TextInput
               style={globalStyles.input}
               placeholder="Rating (1-5)"
               onChangeText={formikprops.handleChange("rating")}
               value={formikprops.values.rating}
               keyboardType="numeric"
+              onBlur={formikprops.handleBlur("rating")}
             />
+            <Text style={globalStyles.errorText}>
+              {formikprops.touched.rating && formikprops.errors.rating}
+            </Text>
             <Button
               title="submit"
               color="maroon"
