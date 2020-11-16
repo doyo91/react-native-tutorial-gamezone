@@ -35,6 +35,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "flex-end",
     justifyContent: "center",
+    borderBottomWidth: 1,
+    borderColor: "#333",
+    elevation: 3,
   },
   headerText: {
     fontWeight: "bold",
